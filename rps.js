@@ -14,6 +14,8 @@ if (playgame) {
                 : compresult === "scissor" && player === "paper" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
                   : `player : ${player}\ncompresult : ${compresult}\nplayer wins!`
                   alert(result);
+                  let playgame = confirm("play gain ?")
+                  playgame ? location.reload() : alert("Thanks for playing");
 
         } else {
             alert("choose rock, paper, scissor")
