@@ -8,7 +8,7 @@ if (playgame) {
             let compresult = computer === 1 ? "rock" 
             : computer === 2 ? "paper"
             : "scissor";
-            let result = compresult === player ? "game tie"
+            let result = compresult === player ? `game tie\nplayer : ${player}\ncompresult : ${compresult}`
             : compresult === "rock" && player === "scissor" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
               : compresult === "paper" && player === "rock" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
                 : compresult === "scissor" && player === "paper" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
