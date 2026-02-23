@@ -1,15 +1,9 @@
-const fuck = document.querySelector(".iphone");
+// modules
+import * as se from "./modules.js"
 
-fuck.addEventListener("click", (event) => {
- fuck.className = "apple";
- event.target.textContent= "bye"
-    setTimeout( () => {
-        fuck.className = "iphone";
-        fuck.textContent="Hi"
-    }, 1000);
-
-}) 
-
+console.log(se.default());
+console.log(se.pp());``
+console.log(se.b());
 
 
 
