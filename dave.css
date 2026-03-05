@@ -1,32 +1,31 @@
 
 body {
-     margin :0;
-   display: flex;
+    margin: 0;
+    display: flex;
     justify-content: center;
 }
 
 .first {
-    margin: 50px auto;
     text-align: center;
 }
 
+
 input {
-    border-radius: 20px;
     padding: 10px;
-    font-size: 12px;
-    width: 75%;
+    border-radius: 30px;
+    font-size: 16px;
     text-align: center;
 }
 
 #example {
-    display : none;
+    display: none;
 }
 
-#firstid:hover{
+input :hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.inputcolor {
+.inputerror {
     color: red;
 }
 
