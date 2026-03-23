@@ -1,35 +1,32 @@
-let playgame = confirm("shall we play a game");
-if(playgame) {
+let PlayGame = confirm("Shall We Play a Game");
 
-while(playgame) {
-    const game = prompt("choose rock, paper, scissor");
-    if (game || game === "") {
-        const player = game.trim().toLowerCase();
-        if(player === "rock" || player === "paper" || player === "scissor") {
-        const computer = Math.floor(Math.random() * 3 );
-        const rps = ["rock", "paper", "scissor"];
-        const compresult = rps[computer];
-         const result = compresult === player ? `game tie\nplayer : ${player}\ncompresult : ${compresult}`
-            : compresult === "rock" && player === "scissor" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
-              : compresult === "paper" && player === "rock" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
-                : compresult === "scissor" && player === "paper" ? `player : ${player}\ncompresult : ${compresult}\ncomputer wins!`
-                  : `player : ${player}\ncompresult : ${compresult}\nplayer wins!`
-                  alert(result);
-                  playgame = confirm("playagain")
-                  if(!playgame) alert ("maybe later");
-                  continue;
-        } else{
-            alert("choose rock, paper, scissor");
-            continue;
-        }
-    } else {
-        alert("ok maybe later");
-        break;
+if (PlayGame) {
+    while (PlayGame) {
+        const game = prompt("Choose Rock, Papper, Scissor");
+        if (game === "") {
+             alert ("Choose either rock, papper, scissor");
+             continue;
+        } else if (game) {
+            const PlayerInput = game.trim().toLowerCase();
+            const math = Math.floor(Math.random()*3);
+            const option = ["rock", "papper", "scissor"];
+            const computerChoice = option[math];
+            if(PlayerInput === "rock" || PlayerInput === "papper" || PlayerInput === "scissor") {
+                const result = PlayerInput === computerChoice ? `Game Tie \nPlayer: ${PlayerInput} \nComputer: ${computerChoice}`
+                : PlayerInput === "rock" && computerChoice === "papper" ? `Computer Wins \nPlayer: ${PlayerInput} \nComputer: ${computerChoice}`
+                : PlayerInput === "papper" && computerChoice === "scissor" ? `Computer Wins \nPlayer: ${PlayerInput} \nComputer: ${computerChoice}`
+                : PlayerInput === "scissor" && computerChoice === "rock" ? `Computer Wins \nPlayer: ${PlayerInput} \nComputer: ${computerChoice}`
+                : `Player Wins \nPlayer: ${PlayerInput} \nComputer: ${computerChoice}`;
+                alert(result);
+            } else {
+             alert ("Choose either rock, papper, scissor");
+            }
+        } else {
+            alert ("Ok Later")
+            break;
+        } 
     }
-    
-} 
 } else {
-    alert("maybe later")
+    alert ("Maybe Later");
 }
-
 
